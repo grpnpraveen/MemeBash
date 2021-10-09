@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import PIL
 from PIL import ImageFont
 from PIL import Image

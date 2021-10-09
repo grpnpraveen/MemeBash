@@ -22,7 +22,7 @@ def swap(personface,meme):
 
 
     detector = dlib.get_frontal_face_detector()
-    predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+    predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")  # PATH
     height, width, channels = img2.shape
     img2_new_face = np.zeros((height, width, channels), np.uint8)
 
@@ -169,10 +169,12 @@ def swap(personface,meme):
     center_face2 = (int((x + x + w) / 2), int((y + y + h) / 2))
 
     seamlessclone = cv2.seamlessClone(result, img2, img2_head_mask, center_face2, cv2.NORMAL_CLONE)
-    cv2.imwrite('face_swapped_output.jpg', seamlessclone)
+    cv2.imwrite('face_swapped_output.jpg', seamlessclone) #OUTPUT
 
 
+#main function
 
-meme_list=os.listdir(r"memes")
+meme_list=os.listdir(r"memes")      #  PATH
 x = random.randint(0,len(meme_list)-1)
-swap("profile.jpg","memes/"+meme_list[x])
+
+swap("profile.jpg","memes/"+meme_list[x])  # user image filename relative  # PATH
