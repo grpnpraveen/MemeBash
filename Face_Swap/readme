@@ -1,0 +1,13 @@
+In the file Face_swapping in line 178 i.e where swap() is written first parameter is user
+
+input image name with extension like .jpg (relative path)
+
+shaope_predictor_68 is dependency so let it be in same relative path
+
+#libraries used 
+import cv2
+import dlib
+import time
+import numpy as np 
+import os 
+import random
