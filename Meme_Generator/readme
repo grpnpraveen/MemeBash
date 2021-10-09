@@ -1,0 +1,15 @@
+read comments in the main function area at the bottom of the code 
+
+Also 
+
+impactttf is dependency keep that in the relative path only 
+
+libraries used pillow 
+and sys
+
+import PIL
+from PIL import ImageFont
+from PIL import Image
+from PIL import ImageDraw
+
+import sys
