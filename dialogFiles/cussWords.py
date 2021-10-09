@@ -1,0 +1,20 @@
+cussWords = [
+"fuck",
+"fucking",
+"bitch",
+"asshole",
+"tits",
+"bastard",
+"Vagina",
+"gudda",
+"bollocks",
+"puka",
+"pooka",
+"yedava",
+"lanje",
+"lanja",
+"kodaka",
+"fuckers",
+"motherfuckers",
+"motherfucker"
+]

@@ -1,0 +1,17 @@
+movieDialoguesHindi = [
+"Our Bussiness is our Bussiness , its none of your bussiness",
+"Rishtey mein toh hum tumhare baap lagte hai, naam hai Shahenshaah!",
+"How’s the josh?",
+"Madarchoood , Tu vahi rukh mei ah raha hoon !!",
+"Saala , shanthi se chodh bhi nehi dete !",
+"Mata ji yahan hai, Behen yahan hai, Maa-Behen ek karne mein aasani hogi.",
+"Attack me bhi gun, defense me bhi gun, Hum banayenge Mirzapur ko Amrica!",
+"Neta banna hai toh Gundey paalo. Gundey mat bano.",
+"Darr ki yahi dikkat hai, ki kabhi bhi Khatam ho sakta hai.",
+"Suru majboori mein kiye the….. Ab maza aa raha hai.",
+"Izzat nahi karte hain… Darte hain sab.",
+"Chutiya hain tumhara ladka. ..... Chutiya hain woh important nahi hai. Hamara ladka hai, Woh important hai.",
+"Agli baar Munna Bhaiya ghar aaye… Zinda wapas hi nahi laute toh?",
+"Oh Bhosidi waley Chacha. Rest kariye, varna Rest in Peace ho jaoge!",
+"Middle class aadmi, aadmi nahi chutiya hota hai. Chutiya.",
+]
