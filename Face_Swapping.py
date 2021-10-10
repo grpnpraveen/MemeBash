@@ -174,7 +174,7 @@ def swap(personface,meme):
 
 #main function
 
-meme_list=os.listdir(r"memes")      #  PATH
-x = random.randint(0,len(meme_list)-1)
+# meme_list=os.listdir(r"memes")      #  PATH
+# x = random.randint(0,len(meme_list)-1)
 
-swap("profile.jpg","memes/"+meme_list[x])  # user image filename relative  # PATH
+# swap("profile.jpg","memes/"+meme_list[x])  # user image filename relative  # PATH
