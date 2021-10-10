@@ -131,9 +131,9 @@
     font-size: large;
     transition-property: all;
   }
-  .btn2{
-      margin-left: 6%;
-  }
+ .btn1{
+   margin-left: 15%;
+ }
   .btngroup button:hover{
     background-color: #0082e6;
     transition-duration: 1.5s;
