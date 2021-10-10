@@ -1,6 +1,9 @@
 # DialoguesDiscordBot
 Famous dialogues in English , Telugu  and Hindi .
 You can add this bot to your server from here : https://discord.com/api/oauth2/authorize?client_id=896301392598290442&permissions=8&scope=bot
+
+WebSite:https://grpnpraveen.github.io/memebash_website/
+
 ## bot commands : 
 * __!get.dialog.telugu__ : For getting dialogues in telugu 
 * __!get.dialog.english__ : For getting dialogues in english
