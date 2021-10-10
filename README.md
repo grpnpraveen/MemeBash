@@ -2,7 +2,7 @@
 https://youtu.be/MZSiOoE9Znk
 # ConceptLink
 https://www.youtube.com/watch?v=Q4k9DXV7MkQ
-# DialoguesDiscordBot
+# MemeBash
 Famous dialogues in English , Telugu  and Hindi .
 You can add this bot to your server from here : https://discord.com/api/oauth2/authorize?client_id=896301392598290442&permissions=8&scope=bot
 
