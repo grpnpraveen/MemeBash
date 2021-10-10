@@ -15,14 +15,14 @@ WebSite:https://grpnpraveen.github.io/memebash_website/
 * __!replace_face_meme__ : Takes in a picture , and replace the face in picture with the face in famous memes
 
 ## Hackx Commands (Try Yourself in discord)
-* __describe_yourself__
-* __why_are_you_made__
-* __what_can_you_do__
-* __what_is_your_impact__
-* __how_are_you_made__
-* __what_value_do_you_bring__
-* __explain_your_feasibility__
-* __what_are_your_future_prospects__
+* __!describe_yourself__
+* __!why_are_you_made__
+* __!what_can_you_do__
+* __!what_is_your_impact__
+* __!how_are_you_made__
+* __!what_value_do_you_bring__
+* __!explain_your_feasibility__
+* __!what_are_your_future_prospects__
 
 
 > __Note__ : If the string contain spaces , then wrap it around ' '/" " (single/double) quotes
