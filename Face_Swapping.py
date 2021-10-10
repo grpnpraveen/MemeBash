@@ -176,5 +176,8 @@ def swap(personface,meme):
 
 # meme_list=os.listdir(r"memes")      #  PATH
 # x = random.randint(0,len(meme_list)-1)
-
-# swap("profile.jpg","memes/"+meme_list[x])  # user image filename relative  # PATH
+# try:
+#     swap("IMG_20190917_180347.jpg","memes/"+meme_list[x])  # user image filename relative  # PATH
+# except:
+#     print("Bot  is not able to recoznize face in the image ")
+#     p=input()

@@ -273,9 +273,11 @@ async def swapUploadFaceMeme(ctx):
         # calling the face_swap function to generate a meme with face swapping
         meme_list=os.listdir(r"memes")      #  PATH
         x = random.randint(0,len(meme_list)-1)
-        swap(imageName,"memes/"+meme_list[x])  # user image filename relative  # PATH
-        print("Swapped face successfully !!")
-
+        try:
+            swap(imageName,"memes/"+meme_list[x])  # user image filename relative  # PATH
+            print("Swapped face successfully !!")
+        except:
+            print("Bot Unable to detect face in the image.")
         # sending an created meme back 
         await ctx.send("Here is your meme !",file = discord.File("face_swapped_output.jpg"))
         print(f"Face swapped meme sent to the channel")
