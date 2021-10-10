@@ -283,6 +283,7 @@ async def swapUploadFaceMeme(ctx):
         except:
             print("Bot unable to detect the face properly!")
             await ctx.send(f"{ctx.author.mention} Bot unable to recognise the face properly !")
+            await ctx.send(f"{ctx.author.mention} Try again with another image!")
 
         # deleting the image uploaded 
         if(os.path.exists(imageName)):
