@@ -149,7 +149,7 @@ async def makeMemeFromPicHin(ctx):
         # folderPath = 'uploadedPics/'
         await ctx.message.attachments[0].save(imageName)
         print(f"Saved Image successfuly : {imageName}")
-        await ctx.send(f"{ctx.author.mention},Image saved successfully !")
+        await ctx.send(f"{ctx.author.mention},Loading the meme ! ! !")
 
         #getting a dialogue from english  
         dialog = random.choice(movieDialoguesHindi)
@@ -159,6 +159,11 @@ async def makeMemeFromPicHin(ctx):
         # sending an created meme back 
         await ctx.send("Here is your meme !",file = discord.File("meme_generated.png"))
         print(f"Meme sent to the channel")
+
+        # deleting the image uploaded 
+        if(os.path.exists(imageName)):
+            os.remove(imageName)
+            print("Image uploaded deleted!")
 
     except IndexError :
         print("No attachments of images")
@@ -187,6 +192,11 @@ async def makeMemeFromPicTel(ctx):
         await ctx.send("Here is your meme !",file = discord.File("meme_generated.png"))
         print(f"Meme sent to the channel")
 
+        # deleting the image uploaded 
+        if(os.path.exists(imageName)):
+            os.remove(imageName)
+            print("Image uploaded deleted!")
+
     except IndexError :
         print("No attachments of images")
         await ctx.send(f"{ctx.author.mention}, there is no image uploaded !")
@@ -213,6 +223,11 @@ async def makeMemeFromPicEng(ctx):
         await ctx.send("Here is your meme !",file = discord.File("meme_generated.png"))
         print(f"Meme sent to the channel")
 
+        # deleting the image uploaded 
+        if(os.path.exists(imageName)):
+            os.remove(imageName)
+            print("Image uploaded deleted!")
+
     except IndexError :
         print("No attachments of images")
         await ctx.send(f"{ctx.author.mention}, there is no image uploaded !")
@@ -235,6 +250,11 @@ async def makeMemeFromPicCustom(ctx,msg):
         # sending an created meme back 
         await ctx.send("Here is your meme !",file = discord.File("meme_generated.png"))
         print(f"Meme sent to the channel")
+
+        # deleting the image uploaded 
+        if(os.path.exists(imageName)):
+            os.remove(imageName)
+            print("Image uploaded deleted!")
 
     except IndexError :
         print("No attachments of images")
