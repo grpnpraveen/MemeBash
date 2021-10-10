@@ -274,6 +274,7 @@ async def swapUploadFaceMeme(ctx):
         meme_list=os.listdir(r"memes")      #  PATH
         x = random.randint(0,len(meme_list)-1)
         swap(imageName,"memes/"+meme_list[x])  # user image filename relative  # PATH
+        print("Swapped face successfully !!")
 
         # sending an created meme back 
         await ctx.send("Here is your meme !",file = discord.File("face_swapped_output.jpg"))
