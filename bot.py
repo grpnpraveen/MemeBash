@@ -84,14 +84,14 @@ async def getDialoguesTelugu(ctx):
 async def getDialoguesTelugu(ctx):
     # ? @param ctx : context - contains the information of channel and guild from where the command came from 
     randomDialogue = f"{ctx.author.mention} be like : " + random.choice(movieDialoguesEnglish)
-    print(f"A Telugu dialogue replied to {ctx.author} ")
+    print(f"A English dialogue replied to {ctx.author} ")
     await ctx.send(randomDialogue)
     
 @bot.command(name='get.dialog.hindi',help="gives you random hindi movie dialogues")
 async def getDialoguesTelugu(ctx):
     # ? @param ctx : context - contains the information of channel and guild from where the command came from 
     randomDialogue = f"{ctx.author.mention} be like : " + random.choice(movieDialoguesHindi)
-    print(f"A Telugu dialogue replied to {ctx.author} ")
+    print(f"A Hindi dialogue replied to {ctx.author} ")
     await ctx.send(randomDialogue)
 
 @bot.command()
@@ -273,7 +273,6 @@ async def swapUploadFaceMeme(ctx):
         # calling the face_swap function to generate a meme with face swapping
         meme_list=os.listdir(r"memes")      #  PATH
         x = random.randint(0,len(meme_list)-1)
-        print("Swapping face successfully !!")
         try:
             swap(imageName,"memes/"+meme_list[x])  # user image filename relative  # PATH
             print("Swapped face successfully !!")

@@ -42,7 +42,7 @@
         <div class="disline" style="font-family:Grechen Fuemen ;">All about the bot and things it can do shortly.and much more</div>
         <div class="disline"  style="font-family:Grechen Fuemen ;">with the most easy-to-use dashboard!</div>
         <div class="btngroup">
-            <button class="btn1">Add to Discord</button>
+          <a href="https://discord.com/oauth2/authorize?client_id=896301392598290442&permissions=8&scope=bot "><button class="btn1">Add to Discord</button></a>
             <button class="btn2">See features</button>
         </div>
     </div>
@@ -89,9 +89,9 @@
           </div>
           <div class="right box">
             <div class="topic">Subscribe us</div>
-            <form action="#">
-              <input type="text" placeholder="Enter email address">
-              <input type="submit" name="" value="Send">
+            <form>
+              <input type="submit" id="subs" onclick="change()" value="Subscribe us">
+              
               <div class="media-icons" id="contact" style="padding-top: 0;">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -102,6 +102,13 @@
           </div>
         </div>
       </footer>
-
+      <script>
+        function change()
+        {
+          Element=document.getElementById("subs");
+          Element.value="Thank You!"
+        }
+      </script>
+     
   </body>
 </html>
