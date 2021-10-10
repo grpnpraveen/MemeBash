@@ -8,7 +8,7 @@ You can add this bot to your server from here : https://discord.com/api/oauth2/a
 * __!make_meme_english__ : Takes in a picture , and generates a meme by adding a famous english dialogue
 * __!make_meme_telugu__ : Takes in a picture , and generates a meme by adding a famous telugu dialogue
 * __!make_meme_hindi__ : Takes in a picture , and generates a meme by adding a famous hindi dialogue
-* __!make_meme_custom__ : Takes in a picture and a string, and generates a meme by adding the string to the picture
+* __!make_meme_custom <custom_message>__ : Takes in a picture and a string, and generates a meme by adding the string to the picture
 
 ### Even monitors the language used by the members in a server . Replies when it finds use of famous unparliamentary words !
 
