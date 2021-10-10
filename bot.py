@@ -258,7 +258,7 @@ async def makeMemeFromPicCustom(ctx,msg):
 
 # TODO : Uncomment the below swapUploadFaceMode function after resolving the cv2 error in FaceSwap.py file 
 # command to swap the face in the given picture to a face in famous meme
-@bot.command(name = "swap_face_meme",help="command to swap the face in the given picture (comaptible with a single selfie or a potriat) to a face in famous meme")
+@bot.command(name = "replace_face_meme",help="command to swap the face in the given picture (comaptible with a single selfie or a potriat) to a face in famous meme")
 async def swapUploadFaceMeme(ctx):
     try:
         # saving the image 
