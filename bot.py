@@ -95,10 +95,11 @@ async def getDialoguesTelugu(ctx):
     await ctx.send(randomDialogue)
 
 @bot.command()
-async def test(ctx,*args):
+async def test(ctx):
     # * here args variable is a tuple . variable no of arguments 
-    print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
-    await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    # print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
+    # await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    await ctx.send(f"Testing the bot !!")
 
 # ! command for creating a new channel 
 # only with admin roles can create a channel 
