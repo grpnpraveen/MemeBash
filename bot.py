@@ -6,15 +6,14 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 # for saving the image 
-import requests
 import uuid # for unique naming of the image 
-import shutil
 # from local files 
 from dialogFiles.movieDialoguesEnglish import movieDialoguesEnglish
 from dialogFiles.movieDialoguesTelugu import movieDialoguesTelugu
 from dialogFiles.movieDialoguesHindi import movieDialoguesHindi
 from dialogFiles.cussWords import cussWords
 from meme_generator import make_meme
+from Face_Swapping import swap
 # dotenv library for parsing .env files 
 
 
@@ -256,6 +255,39 @@ async def makeMemeFromPicCustom(ctx,msg):
     except IndexError :
         print("No attachments of images")
         await ctx.send(f"{ctx.author.mention}, there is no image uploaded !")
+
+# TODO : Uncomment the below swapUploadFaceMode function after resolving the cv2 error in FaceSwap.py file 
+# # command to swap the face in the given picture to a face in famous meme
+# @bot.command(name = "swap_face_meme",help="command to swap the face in the given picture (comaptible with a single selfie or a potriat) to a face in famous meme")
+# async def swapUploadFaceMeme(ctx):
+#     try:
+#         # saving the image 
+#         # ! remove the below code and send the message to meme generator
+#         # print(f"The message with the command : {msg}")
+#         imageName = str(uuid.uuid4()) + '.jpg'
+#         # folderPath = 'uploadedPics/'
+#         await ctx.message.attachments[0].save(imageName)
+#         print(f"Saved Image successfuly : {imageName}")
+#         await ctx.send(f"{ctx.author.mention},Loading the meme with the face in the uploaded picture ! ! !")
+
+#         # calling the face_swap function to generate a meme with face swapping
+#         meme_list=os.listdir(r"memes")      #  PATH
+#         x = random.randint(0,len(meme_list)-1)
+#         swap(imageName,"memes/"+meme_list[x])  # user image filename relative  # PATH
+
+#         # sending an created meme back 
+#         await ctx.send("Here is your meme !",file = discord.File("face_swapped_output.jpg"))
+#         print(f"Face swapped meme sent to the channel")
+
+#         # deleting the image uploaded 
+#         if(os.path.exists(imageName)):
+#             os.remove(imageName)
+#             print("Image uploaded deleted!")
+
+#     except IndexError :
+#         print("No attachments of images")
+#         await ctx.send(f"{ctx.author.mention}, there is no image uploaded !")
+
 
 # handling exceptions 
 @bot.event
