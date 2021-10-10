@@ -174,11 +174,8 @@ async def makeMemeFromPicHin(ctx):
 @bot.command(name = "make_meme_telugu",help="Upload Your selfie to generate an amazing meme in telugu language! ")
 async def makeMemeFromPicTel(ctx):
     try:
-        # saving the image 
-        # ! remove the below code and send the message to meme generator
-        # print(f"The message with the command : {msg}")
         imageName = str(uuid.uuid4()) + '.jpg'
-        # folderPath = 'uploadedPics/'
+        # * saving the image 
         await ctx.message.attachments[0].save(imageName)
         print(f"Saved Image successfuly : {imageName}")
         await ctx.send(f"{ctx.author.mention},Loading the meme ! ! !")
@@ -192,7 +189,7 @@ async def makeMemeFromPicTel(ctx):
         await ctx.send("Here is your meme !",file = discord.File("meme_generated.png"))
         print(f"Meme sent to the channel")
 
-        # deleting the image uploaded 
+        # ! deleting the image uploaded 
         if(os.path.exists(imageName)):
             os.remove(imageName)
             print("Image uploaded deleted!")
