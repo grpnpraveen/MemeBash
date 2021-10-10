@@ -10,7 +10,7 @@ You can add this bot to your server from here : https://discord.com/api/oauth2/a
 * __!make_meme_hindi__ : Takes in a picture , and generates a meme by adding a famous hindi dialogue
 * __!make_meme_custom <custom_message>__ : Takes in a picture and a string, and generates a meme by adding the string to the picture
 > __Note__ : If the string contain spaces , then wrap it around ' '/" " (single/double) quotes
-
+* __!replace_face_meme__ : Takes in a picture , and replace the face in picture with the face in famous memes
 ### Even monitors the language used by the members in a server . Replies when it finds use of famous unparliamentary words !
 
 

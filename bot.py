@@ -95,10 +95,11 @@ async def getDialoguesTelugu(ctx):
     await ctx.send(randomDialogue)
 
 @bot.command()
-async def test(ctx,*args):
+async def test(ctx):
     # * here args variable is a tuple . variable no of arguments 
-    print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
-    await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    # print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
+    # await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    await ctx.send(f"Testing the bot !!")
 
 # ! command for creating a new channel 
 # only with admin roles can create a channel 
@@ -258,7 +259,7 @@ async def makeMemeFromPicCustom(ctx,msg):
 
 # TODO : Uncomment the below swapUploadFaceMode function after resolving the cv2 error in FaceSwap.py file 
 # command to swap the face in the given picture to a face in famous meme
-@bot.command(name = "swap_face_meme",help="command to swap the face in the given picture (comaptible with a single selfie or a potriat) to a face in famous meme")
+@bot.command(name = "replace_face_meme",help="command to swap the face in the given picture (comaptible with a single selfie or a potriat) to a face in famous meme")
 async def swapUploadFaceMeme(ctx):
     try:
         # saving the image 
@@ -283,6 +284,7 @@ async def swapUploadFaceMeme(ctx):
         except:
             print("Bot unable to detect the face properly!")
             await ctx.send(f"{ctx.author.mention} Bot unable to recognise the face properly !")
+            await ctx.send(f"{ctx.author.mention} Try again with another image!")
 
         # deleting the image uploaded 
         if(os.path.exists(imageName)):
