@@ -84,14 +84,14 @@ async def getDialoguesTelugu(ctx):
 async def getDialoguesTelugu(ctx):
     # ? @param ctx : context - contains the information of channel and guild from where the command came from 
     randomDialogue = f"{ctx.author.mention} be like : " + random.choice(movieDialoguesEnglish)
-    print(f"A Telugu dialogue replied to {ctx.author} ")
+    print(f"A English dialogue replied to {ctx.author} ")
     await ctx.send(randomDialogue)
     
 @bot.command(name='get.dialog.hindi',help="gives you random hindi movie dialogues")
 async def getDialoguesTelugu(ctx):
     # ? @param ctx : context - contains the information of channel and guild from where the command came from 
     randomDialogue = f"{ctx.author.mention} be like : " + random.choice(movieDialoguesHindi)
-    print(f"A Telugu dialogue replied to {ctx.author} ")
+    print(f"A Hindi dialogue replied to {ctx.author} ")
     await ctx.send(randomDialogue)
 
 @bot.command()
@@ -100,6 +100,71 @@ async def test(ctx):
     # print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
     # await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
     await ctx.send(f"Testing the bot !!")
+
+
+@bot.command()
+async def describe_yourself(ctx):
+    # * here args variable is a tuple . variable no of arguments 
+    # print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
+    # await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    await ctx.send(f"A fun discord bot to get famous dialogues, morphed images on memes, edited images with dialogues")
+
+@bot.command()
+async def why_are_you_made(ctx):
+    # * here args variable is a tuple . variable no of arguments 
+    # print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
+    # await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    await ctx.send(f"I am built for fun and engaging activities on discord. 😁")
+
+@bot.command()
+async def what_can_you_do(ctx):
+    # * here args variable is a tuple . variable no of arguments 
+    # print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
+    # await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    await ctx.send(f"Give me an image, I can morph it on a meme or attach a dialouge to it. I can also show you famous dialogues.")
+
+
+@bot.command()
+async def what_is_your_impact(ctx):
+    # * here args variable is a tuple . variable no of arguments 
+    # print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
+    # await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    await ctx.send(f"People feel fun when they see their faces morphed or edited with dialouges and I am happy for that.")
+
+
+@bot.command()
+async def how_are_you_made(ctx):
+    # * here args variable is a tuple . variable no of arguments 
+    # print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
+    # await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    await ctx.send(f"I am made using many libraries, frame-works. People behind this used programming language to develop me")
+
+
+@bot.command()
+async def what_value_do_you_bring(ctx):
+    # * here args variable is a tuple . variable no of arguments 
+    # print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
+    # await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    await ctx.send(f"I make morphed images, edited dialogues on images which is a new innovation for people looking for fun.")
+
+
+@bot.command()
+async def explain_your_feasibility(ctx):
+    # * here args variable is a tuple . variable no of arguments 
+    # print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
+    # await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    await ctx.send(f"People fall in love with memes and meme making. This bot will succed with people's love 💗💗.")
+
+@bot.command()
+async def what_are_your_future_prospects(ctx):
+    # * here args variable is a tuple . variable no of arguments 
+    # print(f"Members in server : {ctx.guild} are {ctx.guild.members}")
+    # await ctx.send(f"{len(args)} arguments : {','.join(args)} , server: {ctx.guild}")
+    await ctx.send(f"New versions will include meme customization, they will include GIFs, short videos and many fun commands.")
+
+
+
+
 
 # ! command for creating a new channel 
 # only with admin roles can create a channel 
