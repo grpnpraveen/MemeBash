@@ -6,7 +6,7 @@ from PIL import ImageDraw
 import sys
 
 
-def make_meme(topString, bottomString, filename):
+def make_meme(filename,topString = "This is your", bottomString="Meme !"):
 
 	img = Image.open(filename)
 	imageSize = img.size
@@ -76,11 +76,11 @@ def get_lower(somedata):
 
 #main function here
 
-filename ="successkid.jpg"  #default value ,but this need to be user input image
+# filename ="successkid.jpg"  #default value ,but this need to be user input image
 
-topString=""  #top string default empty
-bottomString="" #bottom string default empty
+# topString=""  #top string default empty
+# bottomString="" #bottom string default empty
 
-#topstring or bottom string based on command these need to be written
-make_meme(topString, bottomString, filename)	
+# #topstring or bottom string based on command these need to be written
+# make_meme(filename)	
 

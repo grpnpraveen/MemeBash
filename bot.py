@@ -14,6 +14,7 @@ from dialogFiles.movieDialoguesEnglish import movieDialoguesEnglish
 from dialogFiles.movieDialoguesTelugu import movieDialoguesTelugu
 from dialogFiles.movieDialoguesHindi import movieDialoguesHindi
 from dialogFiles.cussWords import cussWords
+from meme_generator import make_meme
 # dotenv library for parsing .env files 
 
 
@@ -137,6 +138,107 @@ async def saveUploadedImage(ctx,msg):
         print("No attachments of images")
         await ctx.send(f"{ctx.author.mention}, there is no image uploaded !")
 
+# command to generate meme according to your picture and a famous dialogue in hindi
+@bot.command(name = "make_meme_hindi",help="Upload Your selfie to generate an amazing meme in hindi language! ")
+async def makeMemeFromPicHin(ctx):
+    try:
+        # saving the image 
+        # ! remove the below code and send the message to meme generator
+        # print(f"The message with the command : {msg}")
+        imageName = str(uuid.uuid4()) + '.jpg'
+        # folderPath = 'uploadedPics/'
+        await ctx.message.attachments[0].save(imageName)
+        print(f"Saved Image successfuly : {imageName}")
+        await ctx.send(f"{ctx.author.mention},Image saved successfully !")
+
+        #getting a dialogue from english  
+        dialog = random.choice(movieDialoguesHindi)
+
+        # calling the make_meme function to generate a meme with the uploaded pic
+        make_meme(imageName,dialog,"") # with default strings
+        # sending an created meme back 
+        await ctx.send("Here is your meme !",file = discord.File("meme_generated.png"))
+        print(f"Meme sent to the channel")
+
+    except IndexError :
+        print("No attachments of images")
+        await ctx.send(f"{ctx.author.mention}, there is no image uploaded !")
+
+
+# command to generate meme according to your picture and a famous dialogue in telugu
+@bot.command(name = "make_meme_telugu",help="Upload Your selfie to generate an amazing meme in telugu language! ")
+async def makeMemeFromPicTel(ctx):
+    try:
+        # saving the image 
+        # ! remove the below code and send the message to meme generator
+        # print(f"The message with the command : {msg}")
+        imageName = str(uuid.uuid4()) + '.jpg'
+        # folderPath = 'uploadedPics/'
+        await ctx.message.attachments[0].save(imageName)
+        print(f"Saved Image successfuly : {imageName}")
+        await ctx.send(f"{ctx.author.mention},Loading the meme ! ! !")
+
+        #getting a dialogue from english  
+        dialog = random.choice(movieDialoguesTelugu)
+
+        # calling the make_meme function to generate a meme with the uploaded pic
+        make_meme(imageName,dialog,"") # with default strings
+        # sending an created meme back 
+        await ctx.send("Here is your meme !",file = discord.File("meme_generated.png"))
+        print(f"Meme sent to the channel")
+
+    except IndexError :
+        print("No attachments of images")
+        await ctx.send(f"{ctx.author.mention}, there is no image uploaded !")
+
+# command to generate meme according to your picture and a famous dialogue in english
+@bot.command(name = "make_meme_english",help="Upload Your selfie to generate an amazing meme in english language! ")
+async def makeMemeFromPicEng(ctx):
+    try:
+        # saving the image 
+        # ! remove the below code and send the message to meme generator
+        # print(f"The message with the command : {msg}")
+        imageName = str(uuid.uuid4()) + '.jpg'
+        # folderPath = 'uploadedPics/'
+        await ctx.message.attachments[0].save(imageName)
+        print(f"Saved Image successfuly : {imageName}")
+        await ctx.send(f"{ctx.author.mention},Loading the meme ! ! !")
+
+        #getting a dialogue from three languages 
+        dialog = random.choice(movieDialoguesEnglish)
+
+        # calling the make_meme function to generate a meme with the uploaded pic
+        make_meme(imageName,dialog,"") # with default strings
+        # sending an created meme back 
+        await ctx.send("Here is your meme !",file = discord.File("meme_generated.png"))
+        print(f"Meme sent to the channel")
+
+    except IndexError :
+        print("No attachments of images")
+        await ctx.send(f"{ctx.author.mention}, there is no image uploaded !")
+
+# command to generate meme according to your picture and a the string you provide
+@bot.command(name = "make_meme_custom",help="Upload Your selfie and a string you provide to generate an amazing meme! ")
+async def makeMemeFromPicCustom(ctx,msg):
+    try:
+        # saving the image 
+        # ! remove the below code and send the message to meme generator
+        # print(f"The message with the command : {msg}")
+        imageName = str(uuid.uuid4()) + '.jpg'
+        # folderPath = 'uploadedPics/'
+        await ctx.message.attachments[0].save(imageName)
+        print(f"Saved Image successfuly : {imageName}")
+        await ctx.send(f"{ctx.author.mention},Loading the meme ! ! !")
+
+        # calling the make_meme function to generate a meme with the uploaded pic
+        make_meme(imageName,msg,"") # with default strings
+        # sending an created meme back 
+        await ctx.send("Here is your meme !",file = discord.File("meme_generated.png"))
+        print(f"Meme sent to the channel")
+
+    except IndexError :
+        print("No attachments of images")
+        await ctx.send(f"{ctx.author.mention}, there is no image uploaded !")
 
 # handling exceptions 
 @bot.event
